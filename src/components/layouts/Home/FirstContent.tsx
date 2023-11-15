@@ -1,8 +1,10 @@
 import React from "react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import Image from "next/image";
 
-function Main() {
+import Balancer from "react-wrap-balancer";
+
+export default function FirstContent() {
     return (
         <>
             <main className="max-w-5xl text-center m-auto py-20 space-y-10">
@@ -10,11 +12,17 @@ function Main() {
                     Turn your ideas into reality
                 </h1>
 
-                <p className="p-10 text-lg tracking-[0.2em] w-full">
-                    DevVibe provides solution to anyone with modern technologies and
-                    infrastructure. We help build and scale your application so you don't have to
-                    worry.
-                </p>
+                <div>
+                    <p className="text-base tracking-[0.2em]">
+                        <Balancer>
+                            Have an idea about an app? Or you might want to create a website for
+                            your business? Get in touch with our developers to
+                        </Balancer>
+                    </p>
+                    <p className="text-base tracking-[0.2em]">
+                        understand how you can achieve that!
+                    </p>
+                </div>
 
                 <Button
                     size={"lg"}
@@ -41,5 +49,3 @@ function Main() {
         </>
     );
 }
-
-export default Main;
